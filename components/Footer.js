@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { connect } from 'react-redux'
+import { connect } from 'connect-react-redux'
 import FilterLink from './FilterLink'
 import { getCompletedCount, getListedCount } from '../reducers'
 import { clearCompleted } from '../actions'

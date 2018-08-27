@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import classnames from 'classnames'
-import { connect } from 'react-redux'
+import { connect } from 'connect-react-redux'
 import TodoTextInput from './TodoTextInput'
 import { completeTodo, editTodo, deleteTodo } from '../actions'
 

@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { connect } from 'react-redux'
+import { connect } from 'connect-react-redux'
 import TodoItem from './TodoItem'
 import ToggleAll from './ToggleAll'
 import Footer from './Footer'
