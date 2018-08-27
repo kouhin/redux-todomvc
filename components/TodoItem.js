@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 import classnames from 'classnames'
 import { connect } from 'connect-react-redux'
 import TodoTextInput from './TodoTextInput'
@@ -79,18 +80,15 @@ TodoItem.propTypes = {
   completeTodo: PropTypes.func.isRequired
 }
 
-const makeMapStateToProps = (initialState, initialProps) => {
+const makeMapStateToProps = (state, initialProps) => {
   const { id } = initialProps
-  const mapStateToProps = (state) => {
-    const { todos } = state
-    const todo = todos.byId[id]
-    const relatedTodo = todo.relatedId && todos.byId[todo.relatedId]
-    return {
-      todo,
-      relatedTodo
-    }
+  const { todos } = state
+  const todo = todos.byId[id]
+  const relatedTodo = todo.relatedId && todos.byId[todo.relatedId]
+  return {
+    todo,
+    relatedTodo
   }
-  return mapStateToProps
 }
 
 export default connect(

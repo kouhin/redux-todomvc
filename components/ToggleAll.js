@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types';
 import { connect } from 'connect-react-redux'
 import { getListedCount, getCompletedCount } from '../reducers'
 import { completeAll } from '../actions'
